@@ -18,6 +18,7 @@ def detik_bola():
     soup = BeautifulSoup(html_doc.text, 'html.parser')
     populer_area = soup.find(attrs={'class': 'grid-row list-content'})
     images = populer_area.findAll(attrs={'class': 'media__image'})
+    print(images)
     return render_template('detik.html', images=images)
 
 
